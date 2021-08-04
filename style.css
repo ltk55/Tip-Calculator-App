@@ -1,0 +1,52 @@
+@import url(https://fonts.google.com/specimen/Space+Mono);
+
+:root {
+  /* Primary */
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  /* Neutral */
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  font-family: Space Mono;
+}
+
+body {
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container {
+  width: 50rem;
+  height: 25rem;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.output-container {
+  background-color: var(--very-dark-cyan);
+  width: 50%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
