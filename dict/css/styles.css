@@ -14,21 +14,30 @@ body {
   background-color: #c5e4e7;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
 .container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .logo {
@@ -38,7 +47,8 @@ body {
 .card {
   background-color: white;
   width: 100%;
-  border-radius: 2.5rem;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,6 +101,13 @@ body {
   color: indianred;
   font-weight: 700;
   font-size: 1.5rem;
+  opacity: 0;
+}
+
+.card .input .label-wrapper .show-error-msg {
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 
 .card .input .inp-text {
@@ -154,7 +171,7 @@ body {
   background-color: #9fe8df;
 }
 
-.card .input .btn-wrapper .bnt-active {
+.card .input .btn-wrapper .btn-active {
   background-color: #26c0ab;
   color: #00494d;
 }
@@ -192,7 +209,7 @@ body {
 .card .output .line-wrapper .line-output .desc {
   color: #7f9c9f;
   font-weight: 700;
-  font-size: 1.3re;
+  font-size: 1.3rem;
 }
 
 .card .output .line-wrapper .line-output .value {
@@ -220,7 +237,37 @@ body {
   background-color: #9fe8df;
 }
 
-@media screen and (min-width: 1440px) {
+@-webkit-keyframes show-err {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show-err {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .card {
     width: 64%;
     -webkit-box-orient: horizontal;
@@ -232,21 +279,24 @@ body {
         -ms-flex-align: stretch;
             align-items: stretch;
     padding: 3.4rem;
+    gap: 1.5rem;
+    -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 30px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 30px rgba(0, 0, 0, 0.05);
   }
-  .input {
+  .card .input {
     width: 105%;
     padding: 0 3.5rem 1.5rem 1.5rem;
   }
-  .input .label-wrapper {
+  .card .input .label-wrapper {
     padding: 1rem 0;
   }
-  .input .btn-wrapper .btn {
+  .card .input .btn-wrapper .btn {
     width: 30.5%;
   }
-  .input .btn-wrapper .inp-text {
+  .card .input .btn-wrapper .inp-text {
     width: 30.5%;
   }
-  .output {
+  .card .output {
     width: 95%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -260,10 +310,10 @@ body {
             justify-content: space-between;
     padding: 4rem;
   }
-  .output .line-wrapper .line-output {
+  .card .output .line-wrapper .line-output {
     margin: 0.5rem 0 2.4rem 0;
   }
-  .output .line-wrapper .line-output .value {
+  .card .output .line-wrapper .line-output .value {
     font-size: 4.6rem;
   }
 }

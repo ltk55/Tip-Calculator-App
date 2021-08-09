@@ -1,9 +1,9 @@
 .container {
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .logo {
@@ -13,7 +13,8 @@
 .card {
   background-color: $white;
   width: 100%;
-  border-radius: 2.5rem;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
 
   display: flex;
   flex-direction: column;
@@ -24,6 +25,7 @@
   padding: 2.5rem;
 
   .input {
+    //border: 1px solid magenta; //temporary
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -45,6 +47,12 @@
         color: indianred;
         font-weight: 700;
         font-size: 1.5rem;
+        opacity: 0;
+      }
+
+      .show-error-msg {
+        transition: opacity 1s ease-in-out;
+        opacity: 1;
       }
     }
 
@@ -82,6 +90,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 1.5rem;
+      //border: 1px solid black; //temporary
       padding-top: 1.2rem;
 
       .btn {
@@ -100,7 +109,7 @@
         }
       }
 
-      .bnt-active {
+      .btn-active {
         background-color: $strong-cyan;
         color: $very-dark-cyan;
       }
@@ -133,7 +142,7 @@
         .desc {
           color: $dark-grayish-cyan-2;
           font-weight: 700;
-          font-size: 1.3re;
+          font-size: 1.3rem;
         }
 
         .value {
@@ -161,5 +170,20 @@
         background-color: $btn-hover;
       }
     }
+  }
+}
+
+@keyframes show-err {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

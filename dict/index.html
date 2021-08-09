@@ -15,8 +15,9 @@
   <body>
     <div class="container">
       <div class="logo">
-        <img src="../images/logo.svg" alt="logo" />
+        <img src="./images/logo.svg" alt="logo" />
       </div>
+
       <div class="card">
         <div class="input">
           <div class="bill-container">
@@ -32,7 +33,7 @@
                 id="inp-bill"
                 placeholder="0.0"
               />
-              <img src="../images/icon-dollar.svg" alt="dollor-icon" />
+              <img src="./images/icon-dollar.svg" alt="dollar-icon" />
             </div>
           </div>
 
@@ -41,11 +42,11 @@
               <label for="inp-tip">Select Tip %</label>
             </div>
             <div class="btn-wrapper">
-              <div class="btn">5%</div>
-              <div class="btn">10%</div>
-              <div class="btn">15%</div>
-              <div class="btn">25%</div>
-              <div class="btn">50%</div>
+              <div class="btn tip">5%</div>
+              <div class="btn tip">10%</div>
+              <div class="btn tip btn-active">15%</div>
+              <div class="btn tip">25%</div>
+              <div class="btn tip">50%</div>
               <input
                 class="inp-text"
                 type="text"
@@ -68,9 +69,9 @@
                 type="text"
                 name="inp-people"
                 id="inp-people"
-                placeholder="0.0"
+                placeholder="1"
               />
-              <img src="../images/icon-person.svg" alt="person-icon" />
+              <img src="./images/icon-person.svg" alt="person-icon" />
             </div>
           </div>
         </div>
@@ -82,7 +83,7 @@
                 <div class="title">Tip Amount</div>
                 <div class="desc">/ person</div>
               </div>
-              <div class="val">$4.22</div>
+              <div class="value">$0.00</div>
             </div>
 
             <div class="line-output">
@@ -90,10 +91,10 @@
                 <div class="title">Total</div>
                 <div class="desc">/ person</div>
               </div>
-              <div class="val">$32.79</div>
+              <div class="value">$0.00</div>
             </div>
           </div>
-          <div class="btn">Reset</div>
+          <div class="btn reset">Reset</div>
         </div>
       </div>
     </div>
@@ -104,5 +105,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://github.com/ltk55">Frank Lam</a>.
     </div>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
