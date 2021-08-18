@@ -25,7 +25,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://tip-calculator-app55.netlify.app/)
+- [Live Site](https://tip-calculator-app55.netlify.app/)
 
 ## My process
 
